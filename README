@@ -1,0 +1,7 @@
+Projeto final da disciplina de redes de computadores - 2018/2
+
+ No projeto foi desenvolvido uma aplicação client-servidor, utilizando
+ a linguagem JAVA com sockets e threads.
+	
+ O projeto consiste em um jogo de logic , onde o usuário se conecta com o servidor,
+ e ambos começam a trocar mensagens.
