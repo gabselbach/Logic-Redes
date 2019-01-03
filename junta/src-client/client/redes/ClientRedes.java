@@ -33,8 +33,8 @@ public class ClientRedes {
     public ClientRedes(){}
   public void roda() throws IOException, ClassNotFoundException{
       String codigo;
-        
-       
+         socket = new Socket("localhost", 1234);
+  
           output = new ObjectOutputStream(socket.getOutputStream());
           input = new  ObjectInputStream(socket.getInputStream()); 
         Message m = (Message) input.readObject();

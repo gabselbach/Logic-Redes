@@ -33,8 +33,8 @@ public class ClientRedes {
     public ClientRedes(){}
   public void roda() throws IOException, ClassNotFoundException{
       String codigo;
-        
-       
+         socket = new Socket("localhost", 1234);
+  
           output = new ObjectOutputStream(socket.getOutputStream());
           input = new  ObjectInputStream(socket.getInputStream()); 
         Message m = (Message) input.readObject();
@@ -42,6 +42,8 @@ public class ClientRedes {
                  System.out.println("\nConexão feita \n");
            }
        while(true){
+          
+           
          System.out.println("\nAções do Sistema:  ");
          System.out.println("031 - digitar seu nick ");
          System.out.println("032 - recomeçar o jogo ");
@@ -134,6 +136,7 @@ public class ClientRedes {
         public void clientRequestPush() throws IOException, ClassNotFoundException{
                Message m = new Message();
           m.setIdOperation("038");
+          System.out.println("\nPulou");
           output.writeObject(m);
             output.flush();
              m = (Message) input.readObject();
@@ -191,7 +194,9 @@ public class ClientRedes {
             output.flush();
 			
 	};
-  public static void main(String[] args) throws Exception {
+  public static void main(String[
+          
+          ] args) throws Exception {
      ClientRedes c = new ClientRedes();
      c.roda();
 }

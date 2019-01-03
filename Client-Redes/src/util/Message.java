@@ -12,6 +12,7 @@ public class Message implements Serializable{
 	private int flagAnswer = 0;
         private String msg = new String();
         private int pontuacao;
+        private String nick = new String("");
     
     /* 
     chave : Object
@@ -19,6 +20,14 @@ public class Message implements Serializable{
     ;
     public Message(){
         
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
     }
  
     public Message(String operacao)

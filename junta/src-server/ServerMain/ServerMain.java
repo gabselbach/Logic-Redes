@@ -28,7 +28,7 @@ import java.io.*;
 public class ServerMain {
   public static void main(String[] args) throws Exception {
     try{
-      ServerSocket server=new ServerSocket(8888);
+      ServerSocket server=new ServerSocket(1234);
       int counter=0;
       System.out.println("Server Started ....");
       while(true){
